@@ -1,0 +1,14 @@
+<template name="ProjectSingle">
+    <div class="project">
+        <h1>{{project.name}}</h1>
+        <p>{{project.description}}</p>
+        <h2>Project releases</h2>
+        <p>
+            {{#each project.releases}}
+                <h3>{{name}}</h3>
+                <p>{{notes}}</p>
+                <p><strong>Release date: </strong>{{formatDate releaseDate}}</p>
+            {{/each}}
+        </p>
+    </div>
+</template>
